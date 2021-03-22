@@ -1,0 +1,22 @@
+0.2a --> 0.3
+- added analog stick support to auto underclocking
+--- analog stick movement is now detected, and will prevent it underclocking automatically
+--- additionally, if you move the analog while it is underclocked, it will go back to the original clock speed as with the other buttons
+- rewritten screen blit function 
+--- now supports games that use 16 bit and 32 bit graphics modes
+--- flickering reduced
+--- font improved
+- added a configuration option to set default cpu and bus speed for the start of a game
+-- see gamecpu_cfg.txt for more info
+
+0.2 --> 0.2a
+~ fixed configuration
+--- can now use button names rather than their hex codes in the configuration file (see gamecpu_cfg.txt)
+
+0.1 --> 0.2
+- added automatic underclocking
+--- this feature will automatically underclock the PSP's processor to 100mhz (bus speed 50mhz) after a period of inactivity which you can set in the configuration file. can be switched on or off, as described below
+- added configuration
+--- check gamecpu_cfg.txt, which goes into the root of your memory stick. the prx will not work correctly if this file is missing.
+--- you can configure the trigger buttons for cpu change, the auto underclock (on/off), and the auto underclock timeout
+--- READ THE INSTRUCTIONS CAREFULLY in gamecpu_cfg.txt or you will get it wrong.

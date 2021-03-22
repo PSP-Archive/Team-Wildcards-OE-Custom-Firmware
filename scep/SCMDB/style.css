@@ -1,0 +1,28 @@
+.SCMDB_result {
+	width: 650px;
+	overflow: hidden;
+}
+
+.SCMDB_result_left {
+	overflow: scroll;
+	width: 200px;
+	height: 600px;
+	float: left;
+}
+
+.SCMDB_result_content {
+	width: 400px;
+	float: left;
+	overflow: hidden;
+	margin-left: 50px;
+}
+
+.SCMDB_hidden {
+	overflow: hidden;
+	height: 0px;
+}
+
+.SCMDB_visble {
+	overflow: visible;
+	height: 100%;
+}

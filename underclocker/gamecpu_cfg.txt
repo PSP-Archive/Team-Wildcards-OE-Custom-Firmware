@@ -1,0 +1,30 @@
+# Choose the two buttons you wish to use to trigger the CPU speed change.
+# Possible buttons are:
+#
+#  "SELECT", "START", "UP", "RIGHT", "DOWN", "LEFT"
+#  "LTRIGGER", "RTRIGGER", "TRIANGLE", "CIRCLE", "CROSS"
+#  "SQUARE", "HOME", "NOTE", "SCREEN", "VOLUP", "VOLDOWN"
+#
+# It is recommended to use "LTRIGGER" or "RTRIGGER" as the first button
+#
+# BOTH buttons must be pressed for the speed to be changed.
+
+triggerButton1 = "LTRIGGER";
+triggerButton2 = "SELECT";
+
+# Set default speeds for CPU and bus (these are set when a game is booted)
+# These preset values are the recommended ones.
+
+defaultCpuSpeed = 222;
+defaultBusSpeed = 111;
+
+# Switch automatic underclocking on or off
+
+autoUnderclock = on;
+
+# Enter the automatic underclocking time in seconds
+# e.g. If you want it to underclock after 2 minutes of inactivity, enter 120.
+
+autoUnderclock_timeout = 120;
+
+# End of configuration

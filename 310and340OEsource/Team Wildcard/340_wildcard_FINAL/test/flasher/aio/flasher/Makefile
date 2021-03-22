@@ -1,0 +1,29 @@
+TARGET			= multi_cfw_installer
+OBJS			= main.o psp_dxar.o common.o
+
+INCDIR			=
+LIBDIR			=
+LDFLAGS			=
+LIBS			= -lz -lpsppower
+CFLAGS			= -O2 -G0 -Wall -DAIO -DUSE_MS0
+CXXFLAGS		= $(CFLAGS) -fno-exceptions -fno-rtti
+ASFLAGS			= $(CFLAGS) -c
+
+EXTRA_TARGETS	= multi_cfw_installer.h
+PSP_EBOOT_TITLE	= 3.40* Installer
+PSP_EBOOT_ICON  = ../../common/ICON0.PNG
+PSPSDK			= $(shell psp-config --pspsdk-path)
+include $(PSPSDK)/lib/build.mak
+
+multi_cfw_installer.h: multi_cfw_installer.elf main.o psp_dxar.o common.o
+	psp-strip multi_cfw_installer.elf -o strip.elf
+	bin2c strip.elf multi_cfw_installer.h multi_cfw_installer
+
+main.o: ../../common/main.c
+	$(CXX) $(CXXFLAGS) -c ../../common/main.c -o main.o
+
+psp_dxar.o: psp_dxar.c
+	$(CXX) $(CXXFLAGS) -c psp_dxar.c -o psp_dxar.o
+
+common.o: ../../common/common.c
+	$(CXX) $(CXXFLAGS) -c ../../common/common.c -o common.o
